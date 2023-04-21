@@ -1,0 +1,43 @@
+.main {
+    position: relative;
+}
+
+.layout {
+    margin: 0 160px;
+}
+
+.logo {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    top: 20px;
+    left: 35px;
+}
+
+.sideSocial {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.line {
+    background: rgb(var(--shape-icon-color));
+    width: 2px;
+    height: 194px;
+}
+
+.socialIcons {
+    margin-top: 20px;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+.icon path {
+    fill: rgb(var(--shape-icon-color));
+}
