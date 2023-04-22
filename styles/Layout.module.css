@@ -1,3 +1,7 @@
+#publicLayout {
+    position: relative;
+}
+
 .main {
     position: relative;
 }
@@ -6,13 +10,16 @@
     margin: 0 160px;
 }
 
-.logo {
+.logoHeader {
     position: absolute;
+    top: 20px;
+    left: 35px;
+}
+
+.logo {
     display: flex;
     align-items: center;
     gap: 6px;
-    top: 20px;
-    left: 35px;
 }
 
 .sideSocial {
@@ -32,6 +39,9 @@
 
 .socialIcons {
     margin-top: 20px;
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
 }
 
 .icon {
@@ -40,4 +50,14 @@
 
 .icon path {
     fill: rgb(var(--shape-icon-color));
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    padding: 0 220px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
