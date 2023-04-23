@@ -3,7 +3,7 @@ import styles from '@/styles/Layout.module.css'
 const Footer = () => {
     return (
         <div id={styles.footer}>
-            <div>
+            <div className={styles.logoContainer}>
                 <div className={styles.logo}>
                     <svg width="38" height="37" viewBox="0 0 38 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M18.1387 26.8521L10.169 2.68258L2.19923 26.8521L18.1387 26.8521Z" stroke="#2C64EF" />
@@ -12,11 +12,15 @@ const Footer = () => {
                     </svg>
                     Matt
                 </div>
-                <div>
-                    FrontEnd Developer
-                </div>
+                <span>
+                    front-end developer
+                </span>
             </div>
-            <span>are</span>
+            <div className={styles.footerSocialContainer}>
+                <span className={styles.footerSocialTitle}>
+                    Follow-me
+                </span>
+            </div>
         </div>
     )
 }

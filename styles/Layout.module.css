@@ -7,7 +7,8 @@
 }
 
 .layout {
-    margin: 0 160px;
+    max-width: 75%;
+    margin: auto;
 }
 
 .logoHeader {
@@ -60,4 +61,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.logoContainer {
+    display: flex;
+    flex-flow: column;
+    gap: 16px;
+}
+
+.footerSocialContainer {
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+}
+
+.footerSocialTitle {
+    font-size: 24px;
 }
