@@ -1,0 +1,14 @@
+#intro {
+    display: flex;
+    padding: 54px 10px;
+}
+
+.introText {
+    white-space: pre-wrap;
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.blue {
+    color: rgb(var(--blueText));
+}

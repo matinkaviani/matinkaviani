@@ -1,6 +1,7 @@
 import Layout from '@/modules/Layout'
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
+import "@/config/i18";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

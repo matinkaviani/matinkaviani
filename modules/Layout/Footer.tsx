@@ -1,5 +1,5 @@
 import config from '@/config/confg';
-import styles from '@/styles/Layout.module.css'
+import styles from '@/styles/layout/Layout.module.css'
 
 const Footer = () => {
     return (
