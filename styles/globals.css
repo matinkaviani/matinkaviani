@@ -9,6 +9,19 @@
   --background-main-content: 55, 62, 74;
   --shape-icon-color: 171, 178, 191, 1;
   --blueText: 44, 100, 239, 1;
+  --text: 255, 255, 255, 1;
+
+  --fs10: 10px;
+  --fs11: 11px;
+  --fs12: 12px;
+  --fs13: 13px;
+  --fs14: 14px;
+  --fs15: 15px;
+  --fs16: 16px;
+  --fs18: 18px;
+  --fs20: 20px;
+  --fs26: 26px;
+  --fs34: 34px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,6 +42,7 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   font-family: var(--font-mono);
+  color: rgb(var(--text));
 }
 
 body {

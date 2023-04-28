@@ -3,6 +3,10 @@
     padding: 54px 10px;
 }
 
+.introTextContainer {
+    max-width: 60%;
+}
+
 .introText {
     white-space: pre-wrap;
     font-size: 34px;
@@ -11,4 +15,18 @@
 
 .blue {
     color: rgb(var(--blueText));
+}
+
+.description {
+    font-size: var(--fs18);
+    font-weight: 400;
+    color: rgb(var(--shape-icon-color));
+    margin-top: 32px;
+}
+
+.contactMe {
+    margin-top: 68px;
+}
+.introImageContainer {
+    max-width: 40%;
 }

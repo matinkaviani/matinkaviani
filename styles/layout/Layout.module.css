@@ -50,8 +50,22 @@
     cursor: pointer;
 }
 
+.icon svg {
+    background-color: transparent;
+    transition: linear .1s;
+}
+
+svg.rounded {
+    border-radius: 100px;
+}
+
+.icon:hover svg path {
+    fill: rgb(var(--blueText));
+}
+
 .icon path {
     fill: rgb(var(--shape-icon-color));
+    transition: linear .1s;
 }
 
 #footer {

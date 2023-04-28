@@ -1,0 +1,18 @@
+.btn {
+    padding: 7px 26px;
+    font-family: var(--font-mono);
+    font-size: var(--fs15);
+    border: solid 1px rgb(var(--blueText));
+    cursor: pointer;
+    transition: linear .1s;
+}
+
+.transparent {
+    background-color: transparent;
+    color: var(--text);
+}
+
+.transparent:hover {
+    background-color: rgb(var(--blueText));
+    color: rgb(var(--text));
+}
