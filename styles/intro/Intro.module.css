@@ -1,6 +1,7 @@
 #intro {
     display: flex;
-    padding: 54px 10px;
+    padding: 54px 20px;
+    justify-content: space-between;
 }
 
 .introTextContainer {
@@ -27,6 +28,27 @@
 .contactMe {
     margin-top: 68px;
 }
+
 .introImageContainer {
     max-width: 40%;
+    position: relative;
+}
+
+.introImageContainer img {
+    z-index: 1;
+    position: relative;
+}
+
+.behindImageDot {
+    position: absolute;
+    bottom: 40px;
+    right: -20px;
+    z-index: 0;
+}
+
+.behindImageLogo {
+    position: absolute;
+    top: 90px;
+    left: -115px;
+    z-index: 0;
 }
