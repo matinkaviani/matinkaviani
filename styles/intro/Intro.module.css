@@ -34,6 +34,10 @@
     position: relative;
 }
 
+.introImage {
+    position: relative;
+}
+
 .introImageContainer img {
     z-index: 1;
     position: relative;
@@ -51,4 +55,13 @@
     top: 90px;
     left: -115px;
     z-index: 0;
+}
+
+.imageSlider {
+    width: 408px;
+    height: 37px;
+    background: rgb(var(--background-layout));
+    position: absolute;
+    right: 0;
+    bottom: -33px;
 }
