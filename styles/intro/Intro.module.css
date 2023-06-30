@@ -64,4 +64,15 @@
     position: absolute;
     right: 0;
     bottom: -33px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    gap: 8px;
+}
+
+.rect {
+    background: #2C64EF;
+    display: inline-block;
+    width: 15.78px;
+    height: 16px;
 }

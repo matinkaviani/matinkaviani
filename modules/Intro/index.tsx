@@ -3,9 +3,12 @@ import { Trans, useTranslation } from 'react-i18next';
 import Button from '../Shared/Button';
 import Image from 'next/image';
 import Matin from '@/public/images/m-kaviani.svg';
+import TextSlider from './TextSlider';
 
 const Intro = () => {
     const { t } = useTranslation();
+    const texts = ['Text 1', 'Text 2', 'Text 3', 'Text 4'];
+    const interval = 2000; // milliseconds
     return (
         <div id={styles.intro}>
             <div className={styles.introTextContainer}>
@@ -63,6 +66,7 @@ const Intro = () => {
                 </div>
                 <div className={styles.imageSlider}>
                     <span className={styles.rect}></span>
+                    <TextSlider texts={texts} interval={interval} />
                 </div>
             </div>
         </div>
