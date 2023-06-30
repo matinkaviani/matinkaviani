@@ -1,12 +1,15 @@
 import { useState, useEffect } from 'react';
 import styles from '@/styles/intro/TextSlider.module.css';
+import { useTranslation } from 'react-i18next';
 
 interface TextSliderProps {
     texts: string[];
     interval: number;
+    staticText?: string;
 }
 
-const TextSlider = ({ texts, interval }: TextSliderProps) => {
+const TextSlider = ({ texts, interval, staticText }: TextSliderProps) => {
+    const { t } = useTranslation();
     const [currentTextIndex, setCurrentTextIndex] = useState<number>(0);
 
     useEffect(() => {
@@ -21,6 +24,7 @@ const TextSlider = ({ texts, interval }: TextSliderProps) => {
 
     return (
         <div className={styles.container}>
+            <span className={styles.staticText}>{staticText}</span>
             <div className={styles.slider}>
                 {texts.map((text, index) => (
                     <div

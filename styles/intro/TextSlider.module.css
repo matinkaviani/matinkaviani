@@ -3,12 +3,23 @@
     height: 100%;
     overflow: hidden;
     position: relative;
+    display: flex;
+}
+
+.staticText {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    color: rgb(var(--shape-icon-color));
 }
 
 .slider {
     display: flex;
     flex-direction: column;
     animation: slide-animation linear infinite;
+    position: relative;
+    width: 100%;
 }
 
 .slide {
