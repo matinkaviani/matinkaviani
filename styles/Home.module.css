@@ -1,6 +1,7 @@
 .main {
   background-color: rgb(var(--background-main-content));
   min-height: 100vh;
+  padding: 0 20px;
 }
 
 /* Enable hover only on non-touch devices */

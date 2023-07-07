@@ -1,0 +1,19 @@
+#title {
+    margin-top: -23px;
+    font-size: var(--fs32);
+}
+
+.sharp {
+    color: rgb(var(--blueText));
+}
+.seperator {
+    padding-right: 72px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .seperator svg {
+    width: 100%;
+    max-width: 80%;
+    height: auto;
+  }

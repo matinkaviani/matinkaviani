@@ -1,6 +1,6 @@
 #intro {
     display: flex;
-    padding: 54px 20px;
+    padding: 54px 0 33px 0;
     justify-content: space-between;
 }
 
@@ -10,7 +10,7 @@
 
 .introText {
     white-space: pre-wrap;
-    font-size: 34px;
+    font-size: var(--fs34);
     font-weight: 600;
 }
 

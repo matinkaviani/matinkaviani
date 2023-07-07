@@ -94,7 +94,7 @@ svg.rounded {
 }
 
 .footerSocialTitle {
-    font-size: 24px;
+    font-size: var(--fs24);
 }
 
 .socialFooterIcons {

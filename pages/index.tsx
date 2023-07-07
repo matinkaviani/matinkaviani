@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Intro from '@/modules/Intro'
+import Skills from '@/modules/Skills'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -8,6 +9,7 @@ export default function Home() {
   return (
     <div className={styles.main}>
       <Intro />
+      <Skills />
       {/* <div className={styles.description}>
           <p>
             Get started by editing&nbsp;
