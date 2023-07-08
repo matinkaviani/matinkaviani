@@ -1,19 +1,23 @@
 #title {
-    margin-top: -23px;
-    font-size: var(--fs32);
+  margin-bottom: -18px;
+  margin-right: 50px;
+  font-size: var(--fs32);
 }
 
 .sharp {
-    color: rgb(var(--blueText));
+  color: rgb(var(--blueText));
 }
+
 .seperator {
-    padding-right: 72px;
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .seperator svg {
-    width: 100%;
-    max-width: 80%;
-    height: auto;
-  }
+  padding-right: 72px;
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: row-reverse;
+  align-items: flex-end;
+}
+
+.seperator svg {
+  width: 100%;
+  max-width: 80%;
+  height: auto;
+}
