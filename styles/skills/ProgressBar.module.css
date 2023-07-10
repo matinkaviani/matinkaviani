@@ -20,5 +20,8 @@
     height: 100%;
     background-color: rgb(var(--blueText));
     width: 0;
-    transition: width 0.5s ease;
+}
+
+.progressAnimation {
+    transition: width 1s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
