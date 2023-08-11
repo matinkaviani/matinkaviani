@@ -49,7 +49,7 @@ const Layout = (props: Props) => {
                         <path d="M10.4746 9.45942L18.4443 33.6289L26.414 9.45942L10.4746 9.45942Z" stroke="#2C64EF" />
                         <path d="M35.1133 26.8521L27.1436 2.68258L19.1738 26.8521L35.1133 26.8521Z" stroke="#2C64EF" />
                     </svg>
-                    Matt
+                    <span className={styles.logoText}>Matt</span>
                 </div>
                 <div className={styles.layout}>
                     {props.children}

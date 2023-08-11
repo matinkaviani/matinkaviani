@@ -23,6 +23,8 @@
     font-weight: 400;
     color: rgb(var(--shape-icon-color));
     margin-top: 32px;
+    z-index: 9;
+    position: relative;
 }
 
 .contactMe {
@@ -75,4 +77,18 @@
     display: inline-block;
     width: 15.78px;
     height: 16px;
+}
+
+@media only screen and (max-width: 998px) {
+    #intro {
+        flex-flow: column-reverse;
+        align-items: center;
+        gap: 70px;
+        padding: 0 0 33px 0;
+    }
+
+    .introImageContainer,
+    .introTextContainer {
+        max-width: 100%;
+    }
 }

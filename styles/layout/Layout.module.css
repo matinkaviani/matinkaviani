@@ -108,3 +108,12 @@ svg.rounded {
     left: -15px;
     bottom: 0;
 }
+
+@media only screen and (max-width: 998px) {
+    .logoText {
+        display: none;
+    }
+    .logoHeader {
+        left: 55px;
+    }
+}

@@ -27,7 +27,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ skill, progress }) => {
                     return prevCount + 1;
                 }
             });
-        }, 20); // Increase the count more frequently for smoother animation
+        }, 10); // Increase the count more frequently for smoother animation
 
         return () => {
             clearInterval(interval);
