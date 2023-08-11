@@ -58,7 +58,7 @@
 }
 
 .imageSlider {
-    width: 408px;
+    width: calc(100% + 90px);
     height: 37px;
     background: rgb(var(--background-layout));
     position: absolute;

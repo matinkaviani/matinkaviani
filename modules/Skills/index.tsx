@@ -1,4 +1,4 @@
-import styles from '@/styles/intro/Intro.module.css'
+import styles from '@/styles/skills/Skills.module.css'
 import Title from '../Shared/Title';
 import ProgressBar from './ProgressBar';
 import { useEffect, useState } from 'react';
@@ -25,7 +25,14 @@ const Skills = () => {
     return (
         <div id={styles.skills}>
             <Title title='skills' />
-            <ProgressBar skill='HTML' progress={10} />
+            <div className={styles.skillsGrid}>
+                <ProgressBar skill='HTML' progress={100} />
+                <ProgressBar skill='CSS' progress={100} />
+                <ProgressBar skill='SASS' progress={90} />
+                <ProgressBar skill='JavaScript' progress={80} />
+                <ProgressBar skill='TypeScript' progress={70} />
+                <ProgressBar skill='Next.js' progress={70} />
+            </div>
         </div>
     )
 }

@@ -1,12 +1,13 @@
 .container {
-    margin-top: 80px;
+
+}
+.progressBarAndCounter {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
-
 .skillName {
-    font-weight: bold;
-    margin-right: 10px;
+    font-size: 22px;
 }
 
 .progressBar {
@@ -19,9 +20,30 @@
 .progressIndicator {
     height: 100%;
     background-color: rgb(var(--blueText));
+    /* Different color for progress bar */
     width: 0;
 }
 
 .progressAnimation {
-    transition: width 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+    transition: width 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+    /* Updated cubic-bezier function */
+}
+
+.counter {
+    text-align: right;
+    font-size: var(--fs20);
+    color: #f2f2f2;
+    /* animation: countAnimation 1s ease-out; */
+}
+
+@keyframes countAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

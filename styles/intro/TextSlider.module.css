@@ -12,6 +12,7 @@
     align-items: center;
     margin-right: 10px;
     color: rgb(var(--shape-icon-color));
+    flex: 40%;
 }
 
 .slider {
@@ -20,6 +21,8 @@
     animation: slide-animation linear infinite;
     position: relative;
     width: 100%;
+    flex: 1;
+    white-space: nowrap;
 }
 
 .slide {
