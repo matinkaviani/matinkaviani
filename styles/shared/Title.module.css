@@ -1,23 +1,54 @@
 #title {
   margin-bottom: -18px;
-  margin-right: 50px;
   font-size: var(--fs32);
+  display: flex;
 }
 
 .sharp {
   color: rgb(var(--blueText));
 }
 
-.seperator {
+.separator {
   padding-right: 72px;
   display: flex;
   justify-content: flex-end;
   flex-flow: row-reverse;
   align-items: flex-end;
+  position: relative;
 }
 
-.seperator svg {
+.projectsSeparator {
+  align-items: flex-start;
+}
+
+.projectsSeparator #title {
+  margin-top: -22px;
+}
+
+.separator svg {
   width: 100%;
-  max-width: 80%;
   height: auto;
+}
+
+.extra {
+  font-size: var(--fs18);
+  white-space: nowrap;
+  padding: 0 1.25rem;
+  text-decoration: underline;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  min-width: max-content;
+}
+
+@media only screen and (max-width: 62.375rem) {
+  .separator svg {
+    display: none;
+  }
+
+  #title {
+    font-size: var(--fs18);
+  }
 }

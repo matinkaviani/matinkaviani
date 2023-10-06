@@ -1,30 +1,14 @@
 import styles from '@/styles/skills/Skills.module.css'
 import Title from '../Shared/Title';
 import ProgressBar from './ProgressBar';
-import { useEffect, useState } from 'react';
 const Skills = () => {
-    const [skills, setSkills] = useState([
-        { skill: 'HTML', progress: 80 },
-        { skill: 'CSS', progress: 70 },
-        { skill: 'JavaScript', progress: 60 },
-    ]);
-
-    useEffect(() => {
-        // Simulate progress updates
-        const interval = setInterval(() => {
-            setSkills((prevSkills) =>
-                prevSkills.map((skill) => ({
-                    ...skill,
-                    progress: skill.progress < 100 ? skill.progress + 10 : skill.progress,
-                }))
-            );
-        }, 1000);
-
-        return () => clearInterval(interval);
-    }, []);
     return (
         <div id={styles.skills}>
-            <Title title='skills' />
+            <Title title='skills' separator={
+                <svg xmlns="http://www.w3.org/2000/svg" width="855" height="158" viewBox="0 0 855 158" fill="none">
+                    <path d="M854.588 0.264648V157.108H0.961914" stroke="#ABB2BF" strokeWidth="0.5" />
+                </svg>
+            } />
             <div className={styles.skillsGrid}>
                 <ProgressBar skill='HTML' progress={100} />
                 <ProgressBar skill='CSS' progress={100} />

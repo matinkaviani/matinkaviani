@@ -1,13 +1,11 @@
-.container {
-
-}
 .progressBarAndCounter {
     display: flex;
     align-items: center;
     gap: 10px;
 }
+
 .skillName {
-    font-size: 22px;
+    font-size: var(--fs22);
 }
 
 .progressBar {
@@ -26,14 +24,12 @@
 
 .progressAnimation {
     transition: width 1s cubic-bezier(0.215, 0.61, 0.355, 1);
-    /* Updated cubic-bezier function */
 }
 
 .counter {
     text-align: right;
     font-size: var(--fs20);
     color: #f2f2f2;
-    /* animation: countAnimation 1s ease-out; */
 }
 
 @keyframes countAnimation {
@@ -45,5 +41,15 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media only screen and (max-width: 48rem) {
+    .skillName {
+        font-size: var(--fs16);
+    }
+
+    .counter {
+        font-size: var(--fs14);
     }
 }

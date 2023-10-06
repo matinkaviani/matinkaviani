@@ -13,21 +13,21 @@
 
 .logoHeader {
     position: absolute;
-    top: 20px;
-    left: 35px;
+    top: 1.25rem;
+    left: 4%;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: .375rem;
     font-weight: 600;
 }
 
 .sideSocial {
     position: absolute;
     top: 0px;
-    left: 20px;
+    left: 1.25rem;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -35,15 +35,15 @@
 
 .line {
     background: rgb(var(--shape-icon-color));
-    width: 2px;
-    height: 194px;
+    width: .125rem;
+    height: 12.125rem;
 }
 
 .socialIcons {
-    margin-top: 20px;
+    margin-top: 1.25rem;
     display: flex;
     flex-flow: column;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .icon {
@@ -90,7 +90,7 @@ svg.rounded {
 .footerSocialContainer {
     display: flex;
     flex-flow: column;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .footerSocialTitle {
@@ -100,20 +100,47 @@ svg.rounded {
 .socialFooterIcons {
     display: grid;
     grid-template-columns: auto auto auto;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .footerDots {
     position: absolute;
-    left: -15px;
+    left: -0.9375rem;
     bottom: 0;
 }
 
-@media only screen and (max-width: 998px) {
+@media only screen and (max-width: 62.375rem) {
     .logoText {
         display: none;
     }
+
     .logoHeader {
-        left: 55px;
+        left: 6%;
+        width: 1.3125rem;
+    }
+
+    .line {
+        height: 9.625rem;
+    }
+
+    .icon svg {
+        width: 1.125rem;
+    }
+
+    .socialIcons {
+        gap: .9375rem;
+    }
+
+    .sideSocial {
+        left: .625rem;
+    }
+
+    #footer {
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .logo {
+        justify-content: center;
     }
 }

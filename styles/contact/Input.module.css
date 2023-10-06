@@ -1,0 +1,37 @@
+.inputContainer {
+    position: relative;
+    width: 100%;
+}
+
+.customInput {
+    width: 100%;
+    padding: .625rem;
+    border: .0938rem solid rgb(var(--blueText));
+    transition: border-color 0.3s ease;
+    font-size: 16px;
+    z-index: 1;
+    position: relative;
+    background: transparent;
+}
+
+.customInput:focus {
+    border-color: #007bff;
+}
+
+.placeholder {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transition: top 0.3s ease, left 0.3s ease, font-size 0.3s ease, background-color .3s ease;
+    color: rgb(var(--blueText));
+}
+
+.inputContainer.focused .placeholder {
+    top: -8px;
+    z-index: 1;
+    left: 10px;
+    background-color: rgb(var(--background-main-content));
+    font-size: 12px;
+    color: #fff;
+    padding: 0 .3125rem;
+}

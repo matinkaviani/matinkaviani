@@ -1,13 +1,19 @@
 import styles from "@/styles/shared/Button.module.css";
 import { ReactNode } from "react";
+import Spinner from "./Spinner";
 
-type ButtonProps = {
+interface ButtonProps extends React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement> {
     children: ReactNode;
     variant?: "transparent" | "solid";
+    className?: string;
+    loading?: boolean;
 }
-const Button = ({ children, variant }: ButtonProps) => {
+const Button = ({ children, variant, className, loading, ...rest }: ButtonProps) => {
     return (
-        <button className={`${styles.btn} ${styles[variant!]}`}>
+        <button className={`${styles.btn} ${styles[variant!]} ${className ?? ''}`} {...rest}>
+            {loading ? <Spinner /> : null}
             {children}
         </button>
     )

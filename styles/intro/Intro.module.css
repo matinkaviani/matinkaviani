@@ -1,6 +1,6 @@
 #intro {
     display: flex;
-    padding: 54px 0 33px 0;
+    padding: 3.375rem 0 2.0625rem 0;
     justify-content: space-between;
 }
 
@@ -22,13 +22,13 @@
     font-size: var(--fs18);
     font-weight: 400;
     color: rgb(var(--shape-icon-color));
-    margin-top: 32px;
+    margin-top: 2rem;
     z-index: 9;
     position: relative;
 }
 
 .contactMe {
-    margin-top: 68px;
+    margin-top: 4.25rem;
 }
 
 .introImageContainer {
@@ -47,48 +47,107 @@
 
 .behindImageDot {
     position: absolute;
-    bottom: 40px;
-    right: -20px;
+    bottom: 2.5rem;
+    right: -1.25rem;
     z-index: 0;
 }
 
 .behindImageLogo {
     position: absolute;
-    top: 90px;
-    left: -115px;
+    top: 5.625rem;
+    left: -7.1875rem;
     z-index: 0;
 }
 
 .imageSlider {
-    width: calc(100% + 90px);
-    height: 37px;
+    width: calc(100% + 5.625rem);
+    height: 2.3125rem;
     background: rgb(var(--background-layout));
     position: absolute;
     right: 0;
-    bottom: -33px;
+    bottom: -2.0625rem;
     display: flex;
     align-items: center;
-    padding: 0 10px;
-    gap: 8px;
+    padding: 0 .625rem;
+    gap: .5rem;
 }
 
 .rect {
     background: #2C64EF;
     display: inline-block;
-    width: 15.78px;
-    height: 16px;
+    width: .9862rem;
+    height: 1rem;
 }
 
-@media only screen and (max-width: 998px) {
+@media only screen and (max-width: 62.375rem) {
     #intro {
         flex-flow: column-reverse;
         align-items: center;
-        gap: 70px;
-        padding: 0 0 33px 0;
+        gap: 4.375rem;
+        padding: 0;
     }
 
     .introImageContainer,
     .introTextContainer {
         max-width: 100%;
+        padding-top: 1.875rem;
+    }
+
+    .introText {
+        text-align: center;
+    }
+
+    .imageSlider {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media only screen and (max-width: 48rem) {
+    #intro {
+        gap: 1.5625rem;
+    }
+
+    .introImage img {
+        max-width: 80%;
+        height: auto;
+    }
+
+    .behindImageDot {
+        right: -1.25rem;
+    }
+
+    .imageSlider {
+        bottom: -1.25rem;
+        max-width: 15.75rem;
+        max-height: 1.5625rem;
+    }
+
+    .behindImageLogo {
+        left: -1rem;
+        top: 1.25rem;
+        max-width: 138px;
+    }
+
+    .introImage {
+        text-align: right;
+    }
+
+    .rect {
+        max-width: 12px;
+        max-height: 12px;
+    }
+
+    .introText {
+        font-size: var(--fs18);
+    }
+
+    .description {
+        margin-top: .5rem;
+        font-size: var(--fs14);
+    }
+
+    .contactMe {
+        margin-top: .625rem;
     }
 }

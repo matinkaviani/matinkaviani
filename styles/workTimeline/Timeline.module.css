@@ -1,0 +1,137 @@
+#timeLine {
+    padding: 10rem 0;
+}
+
+.lineWrapper {
+    display: flex;
+    max-width: 55.5625rem;
+    margin: auto;
+    align-items: center;
+}
+
+.bullet {
+    width: .5625rem;
+    height: .5625rem;
+    border-radius: 6.25rem;
+    background-color: rgb(var(--blueText));
+    display: block;
+}
+
+.line {
+    flex: auto;
+    height: .1875rem;
+    background-color: white;
+    position: relative;
+}
+
+.rects {
+    display: flex;
+    gap: .0625rem;
+}
+
+.rect {
+    width: .1875rem;
+    height: .1875rem;
+    background-color: white;
+}
+
+.rect:first-child {
+    margin-left: .0625rem;
+}
+
+.experiences {
+    display: flex;
+    position: relative;
+    top: -52px;
+    justify-content: space-around;
+}
+
+.experience {
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.experience:nth-child(2n) {
+    position: relative;
+    top: -60px;
+}
+
+.experience .title {
+    font-size: var(--fs30);
+}
+
+.experience .loc {
+    font-size: var(--fs20);
+    color: rgb(var(--shape-icon-color));
+}
+
+.ellipse path {
+    transition: ease .1s;
+}
+
+.experience:hover .ellipse path {
+    fill: rgb(var(--blueText));
+}
+
+.mobileView {
+    position: relative;
+}
+
+.mobileView .mobileLine {
+    position: relative;
+}
+
+.mobileView::after {
+    content: '';
+    position: absolute;
+    width: .1875rem;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.mobileView::before {
+    position: absolute;
+    content: "";
+    top: -0.5625rem;
+    bottom: 0;
+    left: calc(50% - .375rem);
+    width: 0.5625rem;
+    height: 0.5625rem;
+    border-radius: 6.25rem;
+    background-color: rgb(var(--blueText));
+    display: block;
+}
+
+.mobileView .experience {
+    position: relative;
+    top: auto;
+    width: 50%;
+    padding: 0 .625rem;
+}
+
+.mobileView .experience.right {
+    left: 50%;
+}
+
+.mobileView .experience.left {
+    left: 0
+}
+
+@media only screen and (max-width: 48rem) {
+    #timeLine {
+        padding: 2.5rem 0;
+    }
+
+    .experience .title {
+        font-size: var(--fs16);
+    }
+
+    .experience .loc {
+        font-size: var(--fs14);
+    }
+}

@@ -1,0 +1,74 @@
+.contactWrapper {
+    padding: 4.375rem 0;
+    display: flex;
+    gap: 4.6875rem;
+}
+
+.text {
+    display: flex;
+    flex-flow: column;
+    gap: 1.625rem;
+    padding: 0 1.25rem;
+    flex: 1;
+}
+
+.letsTalk {
+    font-size: var(--fs34);
+    font-weight: 600;
+}
+
+.blue {
+    color: rgb(var(--blueText));
+}
+
+.gray {
+    color: rgb(var(--shape-icon-color));
+}
+
+.gray a {
+    text-decoration: underline;
+}
+
+.contactParagraph {
+    font-size: var(--fs16);
+    max-width: 25.9375rem;
+    padding: 0;
+    margin-left: 0;
+}
+
+.form {
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+    gap: 1.25rem;
+    padding-right: 6.25rem;
+}
+
+.messageInput {
+    min-height: 8.3125rem;
+    resize: none;
+}
+
+.submitBtn {
+    background: rgba(255, 255, 255, 0.98);
+    color: rgb(var(--blueText));
+    font-weight: 500;
+}
+
+.contactTitle svg {
+    position: absolute;
+    top: 100%;
+    right: -1.25rem;
+    max-width: 80%;
+}
+
+@media only screen and (max-width: 48rem) {
+    .contactWrapper {
+        flex-flow: column;
+        padding: 2.5rem 0;
+    }
+
+    .form {
+        padding-right: 0;
+    }
+}

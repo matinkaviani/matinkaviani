@@ -31,9 +31,9 @@ const Intro = () => {
             <div className={styles.introImageContainer}>
                 <div className={styles.introImage}>
                     <svg className={styles.behindImageLogo} width="207" height="202" viewBox="0 0 207 202" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M103.5 151.427L56.1599 7.86012L8.81978 151.427L103.5 151.427Z" stroke="#2C64EF" stroke-width="1.5" />
-                        <path d="M55.0493 50.1899L102.389 193.757L149.73 50.1899L55.0493 50.1899Z" stroke="#2C64EF" stroke-width="1.5" />
-                        <path d="M198.313 151.427L150.973 7.86012L103.633 151.427L198.313 151.427Z" stroke="#2C64EF" stroke-width="1.5" />
+                        <path d="M103.5 151.427L56.1599 7.86012L8.81978 151.427L103.5 151.427Z" stroke="#2C64EF" strokeWidth="1.5" />
+                        <path d="M55.0493 50.1899L102.389 193.757L149.73 50.1899L55.0493 50.1899Z" stroke="#2C64EF" strokeWidth="1.5" />
+                        <path d="M198.313 151.427L150.973 7.86012L103.633 151.427L198.313 151.427Z" stroke="#2C64EF" strokeWidth="1.5" />
                     </svg>
                     <Image src={Matin} width={304} height={454} alt='Matin Kaviani' />
                     <svg className={styles.behindImageDot} width="75" height="74" viewBox="0 0 75 74" fill="none" xmlns="http://www.w3.org/2000/svg">
