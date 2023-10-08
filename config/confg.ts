@@ -44,7 +44,7 @@ const experiences = [{
     title: "Front-End Dev",
     loc: "Asa Co."
 }]
-const aboutMe = "Hi, I'm Matin Kaviani, a skilled Front-End Developer dedicated to delivering exceptional user experiences. My expertise lies in creating captivating web applications and interfaces. I excel in using cutting-edge technologies to design responsive, user-friendly websites and applications. With a passion for pixel-perfect design and an eye for detail. I exhibit a fervent commitment to continuous learning and a relentless pursuit of optimal resolutions to unresolved issues."
+const aboutMe = "A skilled Front-End Developer dedicated to delivering exceptional user experiences. My expertise lies in creating captivating web applications and interfaces. I excel in using cutting-edge technologies to design responsive, user-friendly websites and applications. With a passion for pixel-perfect design and an eye for detail. I exhibit a fervent commitment to continuous learning and a relentless pursuit of optimal resolutions to unresolved issues."
 const contactText = "Feel free to contact me. About work stuff, recommendations or just chat. I'll respond ASAP.";
 const toastOptions: ToastOptions = {
     position: 'bottom-right',

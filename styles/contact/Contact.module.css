@@ -1,3 +1,7 @@
+#contact {
+    display: block;
+}
+
 .contactWrapper {
     padding: 4.375rem 0;
     display: flex;
@@ -42,6 +46,7 @@
     flex: 1;
     gap: 1.25rem;
     padding-right: 6.25rem;
+    z-index: 1;
 }
 
 .messageInput {
@@ -60,6 +65,7 @@
     top: 100%;
     right: -1.25rem;
     max-width: 80%;
+    z-index: 0;
 }
 
 @media only screen and (max-width: 48rem) {
@@ -70,5 +76,14 @@
 
     .form {
         padding-right: 0;
+    }
+
+    .text {
+        padding: 0;
+    }
+
+    .contactInfo {
+        display: flex;
+        flex-flow: column;
     }
 }

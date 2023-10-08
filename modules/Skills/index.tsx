@@ -1,4 +1,4 @@
-import styles from '@/styles/skills/Skills.module.css'
+import styles from '@/styles/skills/Skills.module.css';
 import Title from '../Shared/Title';
 import ProgressBar from './ProgressBar';
 const Skills = () => {
@@ -14,8 +14,8 @@ const Skills = () => {
                 <ProgressBar skill='CSS' progress={100} />
                 <ProgressBar skill='SASS' progress={90} />
                 <ProgressBar skill='JavaScript' progress={80} />
-                <ProgressBar skill='TypeScript' progress={70} />
-                <ProgressBar skill='Next.js' progress={70} />
+                <ProgressBar skill='TypeScript' progress={80} />
+                <ProgressBar skill='Next.js' progress={80} />
             </div>
         </div>
     )

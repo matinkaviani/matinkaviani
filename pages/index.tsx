@@ -1,4 +1,3 @@
-import About from '@/modules/About'
 import Contact from '@/modules/Contact'
 import Intro from '@/modules/Intro'
 import Projects from '@/modules/Projects'
@@ -16,7 +15,7 @@ export default function Home() {
       <Skills />
       <Projects />
       <WorkTimeline />
-      <About />
+      {/* <About /> */}
       <Contact />
       {/* <div className={styles.description}>
           <p>

@@ -1,8 +1,9 @@
-import styles from '@/styles/intro/Intro.module.css'
+import config from '@/config/confg';
+import Matin from '@/public/images/m-kaviani.png';
+import styles from '@/styles/intro/Intro.module.css';
+import Image from 'next/image';
 import { Trans, useTranslation } from 'react-i18next';
 import Button from '../Shared/Button';
-import Image from 'next/image';
-import Matin from '@/public/images/m-kaviani.svg';
 import TextSlider from './TextSlider';
 
 const Intro = () => {
@@ -13,16 +14,18 @@ const Intro = () => {
         <div id={styles.intro}>
             <div className={styles.introTextContainer}>
                 <div className={styles.introText}>
-                    <Trans
-                        i18nKey="introTitle"
-                        values={{ lastName: "Kaviani", skill: "Developer" }}
-                        components={[<span className={styles.blue} />, <span className={styles.blue} />]}
-                    />
+                    <div>
+                        <Trans
+                            i18nKey="introTitle"
+                            values={{ lastName: "Kaviani", skill: "Developer" }}
+                            components={[<span className={styles.blue} />, <span className={styles.blue} />]}
+                        />
+                    </div>
                     <div className={styles.description}>
-                        {t("introDescription")}
+                        {config.aboutMe}
                     </div>
                     <div className={styles.contactMe}>
-                        <Button variant='transparent'>
+                        <Button variant='transparent' onClick={() => window.scrollTo({ top: 2500, behavior: 'smooth' })}>
                             Contact me!!
                         </Button>
                     </div>
@@ -35,7 +38,7 @@ const Intro = () => {
                         <path d="M55.0493 50.1899L102.389 193.757L149.73 50.1899L55.0493 50.1899Z" stroke="#2C64EF" strokeWidth="1.5" />
                         <path d="M198.313 151.427L150.973 7.86012L103.633 151.427L198.313 151.427Z" stroke="#2C64EF" strokeWidth="1.5" />
                     </svg>
-                    <Image src={Matin} width={304} height={454} alt='Matin Kaviani' />
+                    <Image src={Matin} width={304} height={454} alt='Matin Kaviani' unoptimized />
                     <svg className={styles.behindImageDot} width="75" height="74" viewBox="0 0 75 74" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="2.34449" cy="1.89906" r="1.7566" fill="#2C64EF" />
                         <circle cx="2.34449" cy="19.4651" r="1.7566" fill="#2C64EF" />
@@ -63,10 +66,10 @@ const Intro = () => {
                         <circle cx="72.6087" cy="54.5972" r="1.7566" fill="#2C64EF" />
                         <circle cx="72.6087" cy="72.1632" r="1.7566" fill="#2C64EF" />
                     </svg>
-                </div>
-                <div className={styles.imageSlider}>
-                    <span className={styles.rect}></span>
-                    <TextSlider staticText={t("skillsSlide") ?? ""} texts={texts} interval={interval} />
+                    <div className={styles.imageSlider}>
+                        <span className={styles.rect}></span>
+                        <TextSlider staticText={t("skillsSlide") ?? ""} texts={texts} interval={interval} />
+                    </div>
                 </div>
             </div>
         </div>
