@@ -30,19 +30,22 @@ const experiences = [{
     id: "exp-0",
     date: "2019-2020",
     title: "IT Expert",
-    loc: "MFT Pirouzi"
+    loc: "MFT Pirouzi",
+    quit: true
 },
 {
     id: "exp-1",
     date: "2020-2022",
     title: "Front-End Dev",
-    loc: "Raahbar Co."
+    loc: "Raahbar Co.",
+    quit: true
 },
 {
     id: "exp-2",
     date: "2022-now",
     title: "Front-End Dev",
-    loc: "Asa Co."
+    loc: "Asa Co.",
+    quit: false
 }]
 const aboutMe = "A skilled Front-End Developer dedicated to delivering exceptional user experiences. My expertise lies in creating captivating web applications and interfaces. I excel in using cutting-edge technologies to design responsive, user-friendly websites and applications. With a passion for pixel-perfect design and an eye for detail. I exhibit a fervent commitment to continuous learning and a relentless pursuit of optimal resolutions to unresolved issues."
 const contactText = "Feel free to contact me. About work stuff, recommendations or just chat. I'll respond ASAP.";

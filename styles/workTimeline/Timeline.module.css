@@ -42,28 +42,28 @@
 .experiences {
     display: flex;
     position: relative;
-    top: -52px;
+    top: -3.25rem;
     justify-content: space-around;
 }
 
 .experience {
     display: flex;
     flex-flow: column;
-    gap: 15px;
+    gap: .9375rem;
     align-items: center;
 }
 
 .experience:nth-child(2n) {
     position: relative;
-    top: -60px;
+    top: -3.125rem;
 }
 
 .experience .title {
-    font-size: var(--fs30);
+    font-size: var(--fs24);
 }
 
 .experience .loc {
-    font-size: var(--fs20);
+    font-size: var(--fs18);
     color: rgb(var(--shape-icon-color));
 }
 
@@ -73,6 +73,10 @@
 
 .experience:hover .ellipse path {
     fill: rgb(var(--blueText));
+}
+
+.experience:hover .ellipse.quit path {
+    fill: #DF320C;
 }
 
 .mobileView {
@@ -122,9 +126,17 @@
     left: 0
 }
 
+@media only screen and (max-width: 64rem) {}
+
+
+
 @media only screen and (max-width: 48rem) {
     #timeLine {
-        padding: 2.5rem 0;
+        padding: 9.5rem 0;
+    }
+
+    .experience:nth-child(2n) {
+        top: -2.0625rem;
     }
 
     .experience .title {
@@ -133,5 +145,11 @@
 
     .experience .loc {
         font-size: var(--fs14);
+    }
+}
+
+@media only screen and (max-width: 36rem) {
+    #timeLine {
+        padding: 4rem 0;
     }
 }
