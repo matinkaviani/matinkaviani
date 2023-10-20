@@ -8,7 +8,7 @@ import TextSlider from './TextSlider';
 
 const Intro = () => {
     const { t } = useTranslation();
-    const texts = ['Text 1', 'Text 2', 'Text 3', 'Text 4'];
+    const texts = ['Commitment', 'Reliability', 'Diligence', 'Discipline'];
     const interval = 3500;
     return (
         <div id={styles.intro}>

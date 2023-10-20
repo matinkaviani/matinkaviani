@@ -24,15 +24,33 @@
     z-index: 1;
 }
 
+.imageContainer {
+    display: flex;
+    position: relative;
+}
+
+.imageContainer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(var(--blueText));
+    opacity: .2;
+}
+
 .projectImage {
     max-width: 100%;
+    height: 258px;
+    object-fit: cover;
 }
 
 .info {
     display: flex;
+    flex-flow: column;
     justify-content: space-between;
-    align-items: center;
-    gap: .5rem;
+    gap: .9375rem;
     margin: .75rem 0;
 }
 
@@ -40,7 +58,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-size: var(--fs24);
+    font-size: var(--fs18);
 }
 
 .info .divider {
@@ -53,6 +71,9 @@
 
 .info .techStack {
     font-size: var(--fs16);
+    display: flex;
+    justify-content: center;
+    gap: .625rem;
 }
 
 .projectButton {

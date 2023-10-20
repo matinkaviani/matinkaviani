@@ -1,5 +1,4 @@
 import { ToastOptions } from "react-toastify";
-
 const socialLinks = {
     linkedIn: "https://www.linkedin.com/in/matinkaviiani",
     github: "https://github.com/matinkaviani",
@@ -8,24 +7,47 @@ const socialLinks = {
     instagram: "https://www.instagram.com/matinkaviiani/",
     discord: "https://discordapp.com/users/505795959104733199"
 }
+const techStacks = {
+    html: {
+        key: "HTML5",
+        icon: "/images/techLogo/html5.svg"
+    },
+    stylecss: {
+        key: "CSS",
+        icon: "/images/techLogo/CSS3.svg"
+    },
+    bootstrap: {
+        key: "Bootstrap",
+        icon: "/images/techLogo/bootstrap4.svg"
+    },
+    jquery: {
+        key: "JQuery",
+        icon: "/images/techLogo/jquery.svg"
+    }
+}
+
 const projects = [{
     id: "proj-0",
-    image: "/images/sample.png",
-    title: "E-Commerce",
-    techStack: "Next.js"
+    image: "/images/projects/currency.png",
+    title: "Currency Exchange",
+    link: "https://matinkaviani.github.io/Currency-Project/",
+    techStack: [techStacks.html, techStacks.stylecss, techStacks.bootstrap]
 },
 {
     id: "proj-1",
-    image: "/images/sample.png",
-    title: "Music Player",
-    techStack: "Next.js"
+    image: "/images/projects/safarpost.png",
+    title: "Safarpost",
+    link: "https://matinkaviani.github.io/Safarpost/",
+    techStack: [techStacks.html, techStacks.stylecss, techStacks.bootstrap, techStacks.jquery]
 },
 {
     id: "proj-2",
-    image: "/images/sample.png",
-    title: "MCMS",
-    techStack: "Next.js"
-}]
+    image: "/images/projects/mapna.png",
+    title: "Mapna MRC",
+    link: "https://matinkaviani.github.io/Mapna-MRC/index-en",
+    techStack: [techStacks.html, techStacks.stylecss, techStacks.bootstrap, techStacks.jquery]
+},
+]
 const experiences = [{
     id: "exp-0",
     date: "2019-2020",
@@ -47,7 +69,7 @@ const experiences = [{
     loc: "Asa Co.",
     quit: false
 }]
-const aboutMe = "A skilled Front-End Developer dedicated to delivering exceptional user experiences. My expertise lies in creating captivating web applications and interfaces. I excel in using cutting-edge technologies to design responsive, user-friendly websites and applications. With a passion for pixel-perfect design and an eye for detail. I exhibit a fervent commitment to continuous learning and a relentless pursuit of optimal resolutions to unresolved issues."
+const aboutMe = "skilled Front-End Developer dedicated to delivering exceptional user experiences. My expertise lies in creating captivating web applications and interfaces. I excel in using cutting-edge technologies to design responsive, user-friendly websites and applications. With a passion for pixel-perfect design and an eye for detail."
 const contactText = "Feel free to contact me. About work stuff, recommendations or just chat. I'll respond ASAP.";
 const toastOptions: ToastOptions = {
     position: 'bottom-right',

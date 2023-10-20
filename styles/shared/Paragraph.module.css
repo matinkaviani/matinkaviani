@@ -1,7 +1,7 @@
 .paragraph {
     padding: 3.75rem 0;
     max-width: 54.0625rem;
-    font-size: var(--fs24);
+    font-size: var(--fs18);
     color: rgb(var(--shape-icon-color));
     margin: auto;
 }

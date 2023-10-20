@@ -12,7 +12,7 @@
     align-items: center;
     margin-right: 10px;
     color: rgb(var(--shape-icon-color));
-    flex: 40%;
+    /* flex: 40%; */
 }
 
 .slider {
