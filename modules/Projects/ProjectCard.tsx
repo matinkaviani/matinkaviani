@@ -31,7 +31,7 @@ const ProjectCard = ({ item }: { item: ItemProp }) => {
             </span>
         </div>
         <Button onClick={() => window.open(item.link)} className={styles.projectButton} variant='transparent'>
-            View Project (Soon)
+            View Project
         </Button>
     </div>
 };
