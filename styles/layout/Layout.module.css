@@ -12,7 +12,7 @@
 }
 
 .logoHeader {
-    position: absolute;
+    position: fixed;
     top: 1.25rem;
     left: 4%;
 }
@@ -25,7 +25,7 @@
 }
 
 .sideSocial {
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 1.25rem;
     display: flex;
