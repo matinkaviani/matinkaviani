@@ -2,7 +2,7 @@
 
 This is my personal website, My online home, where you can discover my unique perspective on UI, UX, and technology.
 
-![Project Screenshot](https://raw.githubusercontent.com/matinkaviani/matinkaviani/main/public/images/ss.png?token=GHSAT0AAAAAACI4I64HTQZQOATS4ITJYDISZJWFVXQ)
+![Project Screenshot](https://matinkaviani.storage.iran.liara.space/images/matinkaviani.png)
 
 ## Table of Contents
 
