@@ -30,7 +30,7 @@ const projects = [{
     id: "proj-0",
     image: "/images/projects/currency.png",
     title: "Currency Exchange",
-    link: "https://matinkaviani.github.io/Currency-Project/",
+    link: "https://matinkaviani.github.io/Toranj-Exchange-Project/",
     techStack: [techStacks.html, techStacks.stylecss, techStacks.bootstrap]
 },
 {
