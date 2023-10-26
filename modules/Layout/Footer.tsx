@@ -1,7 +1,33 @@
 import config from '@/config/confg';
-import styles from '@/styles/layout/Layout.module.css'
+import styles from '@/styles/layout/Layout.module.css';
+import gsap, { Power1 } from 'gsap';
+import { useEffect, useRef } from 'react';
 
 const Footer = () => {
+    const dotsRef = useRef<HTMLDivElement | null>(null);
+    useEffect(() => {
+        const handleMouseMove = (event: MouseEvent) => {
+            const xPos = (event.clientX / window.innerWidth) - 0.5;
+            const yPos = (event.clientY / window.innerHeight) - 0.5;
+
+            if (dotsRef.current) {
+                gsap.to(dotsRef.current, {
+                    x: 20 * xPos,
+                    // y: 20 * yPos,
+                    duration: .6,
+                    ease: Power1.easeOut,
+                    // perspective: 900,
+                    transformOrigin: 'center',
+                });
+            }
+        };
+
+        window.addEventListener('mousemove', handleMouseMove);
+
+        return () => {
+            window.removeEventListener('mousemove', handleMouseMove);
+        };
+    }, []);
     return (
         <div id={styles.footer}>
             <div className={styles.logoContainer}>
@@ -56,7 +82,7 @@ const Footer = () => {
                     </a>
                 </div>
             </div>
-            <div className={styles.footerDots}>
+            <div className={styles.footerDots} ref={dotsRef}>
                 <svg width="94" height="94" viewBox="0 0 94 94" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.3">
                         <circle cx="3.18485" cy="3.93778" r="3.10672" fill="#2C64EF" />

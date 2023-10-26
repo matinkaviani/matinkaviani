@@ -1,11 +1,37 @@
 import config from '@/config/confg';
 import styles from '@/styles/projects/Projects.module.css';
 import titleStyles from "@/styles/shared/Title.module.css";
+import gsap, { Power1 } from 'gsap';
+import { ForwardedRef, forwardRef, useEffect, useRef } from 'react';
 import Title from '../Shared/Title';
 import ProjectCard from './ProjectCard';
 
-const Projects = () => {
-    return <div id={styles.projects}>
+const Projects = forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => {
+    const dotsRef = useRef<HTMLDivElement | null>(null);
+    useEffect(() => {
+        const handleMouseMove = (event: MouseEvent) => {
+            const xPos = (event.clientX / window.innerWidth) - 0.5;
+            const yPos = (event.clientY / window.innerHeight) - 0.5;
+
+            if (dotsRef.current) {
+                gsap.to(dotsRef.current, {
+                    x: 20 * xPos,
+                    y: 20 * yPos,
+                    duration: .6,
+                    ease: Power1.easeOut,
+                    // perspective: 900,
+                    transformOrigin: 'center',
+                });
+            }
+        };
+
+        window.addEventListener('mousemove', handleMouseMove);
+
+        return () => {
+            window.removeEventListener('mousemove', handleMouseMove);
+        };
+    }, []);
+    return <div id={styles.projects} ref={ref}>
         <Title className={titleStyles.projectsSeparator} title='projects' separator={
             <svg xmlns="http://www.w3.org/2000/svg" width="736" height="98" viewBox="0 0 736 98" fill="none">
                 <path d="M735.588 98V1H0" stroke="#ABB2BF" strokeWidth="0.5" />
@@ -17,7 +43,7 @@ const Projects = () => {
             {config.projects.map(item => (
                 <ProjectCard key={item.id} item={item} />
             ))}
-            <div className={styles.dots}>
+            <div className={styles.dots} ref={dotsRef}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="76" height="76" viewBox="0 0 76 76" fill="none">
                     <g opacity="0.3">
                         <circle cx="2.86719" cy="2.85449" r="2.5" fill="#2C64EF" />
@@ -50,5 +76,5 @@ const Projects = () => {
             </div>
         </div>
     </div>
-};
+});
 export default Projects;
