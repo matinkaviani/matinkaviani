@@ -5,7 +5,7 @@
 }
 
 .introTextContainer {
-    max-width: 60%;
+    max-width: 50%;
 }
 
 .introText {
@@ -32,7 +32,7 @@
 }
 
 .introImageContainer {
-    max-width: 40%;
+    max-width: 50%;
     position: relative;
 }
 
