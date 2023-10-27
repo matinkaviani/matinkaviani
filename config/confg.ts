@@ -21,7 +21,7 @@ const techStacks = {
         icon: "/images/techLogo/bootstrap4.svg"
     },
     jquery: {
-        key: "JQuery",
+        key: "jQuery",
         icon: "/images/techLogo/jquery.svg"
     }
 }

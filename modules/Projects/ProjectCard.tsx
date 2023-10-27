@@ -1,5 +1,6 @@
 import styles from '@/styles/projects/Projects.module.css';
 import { ReactNode } from 'react';
+import { Tooltip } from 'react-tooltip';
 import Button from '../Shared/Button';
 type TechStack = {
     key: string;
@@ -24,8 +25,9 @@ const ProjectCard = ({ item }: { item: ItemProp }) => {
             <span className={styles.divider}></span>
             <span className={styles.techStack}>
                 {item.techStack.map(x => (
-                    <span key={x.key}>
-                        <img src={x.icon as string} alt='tech-logo' width={25} height={25} />
+                    <span data-tooltip-id={x.key}>
+                        <Tooltip id={x.key} place='top' content={x.key} />
+                        <img data-tooltip-content={x.key} key={x.key} src={x.icon as string} alt='tech-logo' width={25} height={25} />
                     </span>
                 ))}
             </span>
