@@ -1,19 +1,10 @@
 import styles from '@/styles/projects/Projects.module.css';
-import { ReactNode } from 'react';
 import { Tooltip } from 'react-tooltip';
 import Button from '../Shared/Button';
-type TechStack = {
-    key: string;
-    icon: ReactNode;
-}
-interface ItemProp {
-    id: string;
-    image: string;
-    title: string;
-    link: string;
-    techStack: TechStack[];
-}
-const ProjectCard = ({ item }: { item: ItemProp }) => {
+import { IProjectsData, TechStack } from './models';
+
+const ProjectCard = ({ item }: { item: IProjectsData }) => {
+    const techStackData: TechStack[] = JSON.parse(item.techStack.toString());
     return <div key={item.id} className={styles.card}>
         <div className={styles.imageContainer}>
             <img className={styles.projectImage} alt={item.title} src={item.image} />
@@ -24,8 +15,8 @@ const ProjectCard = ({ item }: { item: ItemProp }) => {
             </span>
             <span className={styles.divider}></span>
             <span className={styles.techStack}>
-                {item.techStack.map(x => (
-                    <span data-tooltip-id={x.key}>
+                {techStackData.map(x => (
+                    <span key={x.key} data-tooltip-id={x.key}>
                         <Tooltip id={x.key} place='top' content={x.key} />
                         <img data-tooltip-content={x.key} key={x.key} src={x.icon as string} alt='tech-logo' width={25} height={25} />
                     </span>

@@ -1,13 +1,15 @@
-import config from '@/config/confg';
+import useFetch from '@/config/hooks/useFetch';
 import styles from '@/styles/projects/Projects.module.css';
 import titleStyles from "@/styles/shared/Title.module.css";
 import gsap, { Power1 } from 'gsap';
 import { ForwardedRef, forwardRef, useEffect, useRef } from 'react';
+import Skeleton from '../Shared/Skeleton';
 import Title from '../Shared/Title';
 import ProjectCard from './ProjectCard';
-
+import { IProjectsData } from './models';
 const Projects = forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => {
     const dotsRef = useRef<HTMLDivElement | null>(null);
+    const { data, isLoading } = useFetch<IProjectsData[]>(`${process.env.NEXT_PUBLIC_LOCAL_API}/projects`);
     useEffect(() => {
         const handleMouseMove = (event: MouseEvent) => {
             const xPos = (event.clientX / window.innerWidth) - 0.5;
@@ -40,9 +42,11 @@ const Projects = forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => {
         // extra="View all"
         />
         <div className={styles.projectsContainer}>
-            {config.projects.map(item => (
-                <ProjectCard key={item.id} item={item} />
-            ))}
+            <Skeleton isLoading={isLoading} count={data?.length}>
+                {data?.filter(c => c.isActive).map(item => (
+                    <ProjectCard key={item.id} item={item} />
+                ))}
+            </Skeleton>
             <div className={styles.dots} ref={dotsRef}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="76" height="76" viewBox="0 0 76 76" fill="none">
                     <g opacity="0.3">
