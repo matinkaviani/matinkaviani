@@ -43,7 +43,7 @@ const Projects = forwardRef((props, ref: ForwardedRef<HTMLDivElement>) => {
         />
         <div className={styles.projectsContainer}>
             <Skeleton isLoading={isLoading} count={data?.length}>
-                {data?.filter(c => c.isActive).map(item => (
+                {data?.filter(c => c.isActive).slice(0, 3).map(item => (
                     <ProjectCard key={item.id} item={item} />
                 ))}
             </Skeleton>

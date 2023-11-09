@@ -10,4 +10,5 @@ export interface IProjectsData {
     title: string;
     link: string;
     techStack: TechStack[];
+    isActive: boolean;
 }
