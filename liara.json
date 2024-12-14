@@ -1,8 +1,8 @@
 {
-"app":"matinkaviani"
-"port":3000
-"build":{
-"location":"iran"
-}
-"disks":[]
+  "app": "matinkaviani",
+  "port": 3000,
+  "build": {
+    "location": "iran"
+  },
+  "disks": []
 }
