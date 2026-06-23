@@ -48,7 +48,7 @@
 
 | Project | Description |
 |---------|-------------|
-| [**Portfolio**](https://matinkaviani.net) | Interactive portfolio OS — terminal, AI assistant, projects, résumé, and contact |
+| [**markdown-to-diagram**](https://github.com/matinkaviani/markdown-to-diagram) | Visual tool to turn markdown into diagrams — TypeScript |
 | [**core-portfolio-app**](https://github.com/matinkaviani/core-portfolio-app) | CORE portfolio source — Next.js, Cloudflare Workers, AI assistant |
 | [**react-light-table**](https://github.com/matinkaviani/react-light-table) | Lightweight React table with sorting, pagination, and extensible APIs |
 
